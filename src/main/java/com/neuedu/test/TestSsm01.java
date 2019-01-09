@@ -18,8 +18,9 @@ import java.util.List;
 @ContextConfiguration(locations = "classpath:applicationContext.xml")
 public class TestSsm01 {
     @Resource
-    private UserDao dao;
-    @Test
+    private IUserService dao;
+
+/*    @Test
     public  void  test(){
         List<User> list=dao.getLists();
         for (User u:list
@@ -27,6 +28,6 @@ public class TestSsm01 {
             System.out.println(u);
         }
 
-    }
+    }*/
 
 }

@@ -13,7 +13,7 @@
 </head>
 <body>
 <table>
-    <form>
+    <form method="post">
         <input type="text" name="name">
         <input type="submit" value="搜索">
     </form>
@@ -51,8 +51,8 @@
                     <li>上一页</li>--%>
                 </c:when>
                 <c:otherwise>
-                    <li><a href="list.do?pageNum=1">首页</a></li>
-                    <li><a href="list.do?pageNum=${pages.prePage}">上一页</a></li>
+                    <li><a href="list.do?pageNum=1${name}">首页</a></li>
+                    <li><a href="list.do?pageNum=${pages.prePage}${name}">上一页</a></li>
                 </c:otherwise>
             </c:choose>
             <c:forEach items="${pages.navigatepageNums}" var="i">
@@ -61,7 +61,7 @@
                         <li>${i}</li>
                     </c:when>
                     <c:otherwise>
-                        <li><a href="list.do?pageNum=${i}">${i}</a></li>
+                        <li><a href="list.do?pageNum=${i}${name}">${i}</a></li>
                     </c:otherwise>
                 </c:choose>
             </c:forEach>
@@ -71,14 +71,13 @@
                     <li>下一页</li>--%>
                 </c:when>
                 <c:otherwise>
-                    <li><a href="list.do?pageNum=${pages.nextPage}">下一页</a></li>
-                    <li><a href="list.do?pageNum=${pages.navigateLastPage}">尾页</a></li>
+                    <li><a href="list.do?pageNum=${pages.nextPage}${name}">下一页</a></li>
+                    <li><a href="list.do?pageNum=${pages.pages}${name}">尾页</a></li>
                 </c:otherwise>
             </c:choose>
         </c:when>
     </c:choose>
     <br>
-    ${pages}
 </ul>
 </body>
 </html>

@@ -4,6 +4,7 @@ import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.neuedu.pojo.User;
 import com.neuedu.service.IUserService;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -23,11 +24,20 @@ public class WebTest {
         int pageNum= req.getParameter("pageNum")==null? 1:Integer.parseInt(req.getParameter("pageNum"));
         int pageSize = 3;
         PageHelper.startPage(pageNum,pageSize);
-        System.out.println(user);
-       /* List<User> list = service.getLists();
+        List<User> list =null;
+        if (StringUtils.isBlank(user.getName())){
+            user.setName(null);
+            System.out.println(user);
+            list = service.getLists(user);
+        }else {
+            list = service.getLists(user);
+            String name ="&name="+user.getName();
+            System.out.println(name);
+            map.addAttribute("name",name);
+        }
         PageInfo<User> page = new PageInfo<>(list);
         map.addAttribute("lists",list);
-        map.addAttribute("pages",page);*/
+        map.addAttribute("pages",page);
         return "list";
     }
 

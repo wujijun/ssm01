@@ -5,11 +5,11 @@
 <mapper namespace="com.neuedu.dao.UserDao">
     <select id="getLists" resultType="User" parameterType="User">
         select * from user
-      <trim>
+      <where>
           <if test="name!=null">
-              and where name=#{name}
+               name like concat('%',#{name},'%')
           </if>
-      </trim>
+      </where>
     </select>
     <select id="insertOne"  resultType="Integer">
         insert into user

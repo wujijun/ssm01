@@ -43,7 +43,6 @@
                             rowBoundsWithCount=true
                         </value>
                     </property>
-
                 </bean>
             </array>
         </property>

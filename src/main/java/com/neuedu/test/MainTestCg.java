@@ -9,7 +9,7 @@ public class MainTestCg {
         Enhancer enhancer = new Enhancer();
         enhancer.setSuperclass(CgTest.class);
         enhancer.setCallback(new AgentTest());
-        CgTest s = (CgTest)enhancer.create();
-        System.out.println(s);
+        /*CgTest s = (CgTest)enhancer.create();
+        System.out.println(s);*/
     }
 }

@@ -13,6 +13,11 @@ import java.util.List;
 public class UserServiceImpl implements IUserService {
     @Autowired
     private UserDao dao;
+
+    public UserServiceImpl() {
+        System.out.println("构造方法");
+    }
+
     @Override
     public List<User> getLists(User user) {
         return dao.getLists(user);
@@ -36,5 +41,10 @@ public class UserServiceImpl implements IUserService {
     @Override
     public User getOne(int id) {
         return dao.getOne(id);
+    }
+
+    @Override
+    public void doSome() {
+        System.out.println("do some thing");
     }
 }

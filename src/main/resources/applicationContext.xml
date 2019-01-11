@@ -50,4 +50,14 @@
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
         <property name="basePackage" value="com.neuedu.dao"/>
     </bean>
+    <bean name="service" class="com.neuedu.service.UserServiceImpl"/>
+
+    <bean name="d" class="com.neuedu.pojo.Dept">
+        <property name="pname" value="ksdkd"></property>
+    </bean>
+    <bean  name="user" class="com.neuedu.pojo.User">
+        <property name="name" value="wuyun"/>
+        <property name="dept" ref="d"/>
+
+    </bean>
 </beans>

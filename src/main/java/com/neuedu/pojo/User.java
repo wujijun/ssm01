@@ -8,6 +8,7 @@ public class User {
     private String name;
     private String password;
     private String email;
+    private Dept dept;
 
     public Integer getId() {
         return id;
@@ -39,5 +40,13 @@ public class User {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public Dept getDept() {
+        return dept;
+    }
+
+    public void setDept(Dept dept) {
+        this.dept = dept;
     }
 }

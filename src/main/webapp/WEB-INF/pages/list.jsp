@@ -13,7 +13,7 @@
 </head>
 <body>
 <table>
-    <form method="post">
+    <form >
         <input type="text" name="name">
         <input type="submit" value="搜索">
     </form>

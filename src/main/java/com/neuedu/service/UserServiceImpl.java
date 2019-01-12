@@ -18,6 +18,7 @@ public class UserServiceImpl implements IUserService {
         System.out.println("构造方法");
     }
 
+
     @Override
     public List<User> getLists(User user) {
         return dao.getLists(user);

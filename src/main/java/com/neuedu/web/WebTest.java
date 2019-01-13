@@ -84,7 +84,9 @@ public class WebTest {
     }
     @RequestMapping("/doLogin.do")
     public String doLogin(String name){
-        System.out.println(name);
+
+        User user = service.getone(name);
+        System.out.println(user);
         return "redirect:list.do";
     }
 }

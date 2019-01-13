@@ -17,7 +17,8 @@
     姓名：<input type="text" name="name" value="${User.name}"><br>
     密码：<input type="text" name="password" value="${User.password}"><br>
     电子邮箱：<input type="email" name="email" value="${User.email}"><br>
-    <input type="submit" name="submit" value="确认添加">
+    部门：<input type="text" name="name" value="${User.dept}"><br>
+    <input type="submit" name="submit" value="确认修改">
 </form>
 </body>
 </html>

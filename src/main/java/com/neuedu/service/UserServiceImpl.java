@@ -48,4 +48,9 @@ public class UserServiceImpl implements IUserService {
     public void doSome() {
         System.out.println("do some thing");
     }
+
+    @Override
+    public User getone(String name) {
+        return dao.getone(name);
+    }
 }

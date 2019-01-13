@@ -55,13 +55,13 @@ public class WebTest {
     public String doAdd(User user){
         System.out.println(user);
         service.insertOne(user);
-        return "redirect:index.do";
+        return "redirect:list.do";
     }
     @RequestMapping("/delete.do")
     public String delete(int id){
         System.out.println(id);
         service.delete(id);
-        return "redirect:index.do";
+        return "redirect:list.do";
     }
     @RequestMapping("/update.do")
     public String update(int id,ModelMap map){
@@ -74,6 +74,17 @@ public class WebTest {
     public String doUpdate(User user){
         System.out.println(user);
         service.update(user);
-        return "redirect:index.do";
+        return "redirect:list.do";
+    }
+
+    @RequestMapping("/a.do")
+    public String login(String name){
+        System.out.println(name);
+        return "a";
+    }
+    @RequestMapping("/doLogin.do")
+    public String doLogin(String name){
+        System.out.println(name);
+        return "redirect:list.do";
     }
 }

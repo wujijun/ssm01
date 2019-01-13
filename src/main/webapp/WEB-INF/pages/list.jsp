@@ -17,7 +17,6 @@
         <input type="text" name="name">
         <input type="submit" value="搜索">
     </form>
-
     <thead>
     <tr>
         <th>编号</th>
@@ -41,6 +40,9 @@
     </c:forEach>
     </tbody>
 </table>
+<form action="/add.do" method="post">
+    <input type="submit" value="注册">
+</form>
 <br>
 <ul>
     <c:choose>

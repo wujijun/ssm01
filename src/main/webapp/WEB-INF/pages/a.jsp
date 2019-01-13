@@ -11,6 +11,10 @@
     <title>Title</title>
 </head>
 <body>
-a
+<form action="/doLogin.do" method="post">
+   用户名： <input type="text" name="name"><br>
+   密码： <input type="text" name="psd"><br>
+    <input type="submit" value="登录">
+</form>
 </body>
 </html>

@@ -11,4 +11,5 @@ public interface IUserService {
     public  Integer update(User user);
     public  User getOne(int id);
     public void doSome();
+    public  User getone(String name);
 }

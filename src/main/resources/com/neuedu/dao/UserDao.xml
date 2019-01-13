@@ -45,6 +45,9 @@
     <select id="getOne" resultType="User">
         select * from user where id = #{id}
     </select>
+    <select id="getone" resultType="User">
+        select * from user where name = #{name}
+    </select>
 
 
 </mapper>

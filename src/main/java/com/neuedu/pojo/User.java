@@ -8,6 +8,7 @@ public class User {
     private String name;
     private String password;
     private String email;
+
     private Dept dept;
 
     public Integer getId() {
@@ -45,8 +46,9 @@ public class User {
     public Dept getDept() {
         return dept;
     }
-
+    @TestA
     public void setDept(Dept dept) {
         this.dept = dept;
     }
+
 }

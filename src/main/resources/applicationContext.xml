@@ -70,11 +70,13 @@
         <property name="interceptorNames" value="bef"/>  &lt;!&ndash;name用value连接&ndash;&gt;
     </bean>-->
     <bean name="around" class="com.neuedu.test2.AroundTest"/>
+    <!--异常-->
+    <bean name="except" class="com.neuedu.test2.ExceptionTest"/>
     <!--切面对象-->
     <bean name="after" class="com.neuedu.test2.AfterTest"/>
     <!--连接关系-->
     <bean name="ATest" class="org.springframework.aop.framework.ProxyFactoryBean">
         <property name="target" ref="test"/>   <!--类型用ref连接-->
-        <property name="interceptorNames" value="around"/>  <!--name用value连接-->
+        <property name="interceptorNames" value="except"/>  <!--name用value连接-->
     </bean>
 </beans>

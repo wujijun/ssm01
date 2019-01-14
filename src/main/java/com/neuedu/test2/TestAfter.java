@@ -6,9 +6,9 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class TestAfter {
     @Test
-    public void ta(){
+    public void ta() throws UserException {
         ApplicationContext ac = new ClassPathXmlApplicationContext("applicationContext.xml");
         ITest service = (ITest)ac.getBean("ATest");
-        service.sale();
+        service.login("name1","123");
     }
 }

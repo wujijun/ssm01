@@ -58,6 +58,23 @@
     <bean  name="user" class="com.neuedu.pojo.User">
         <property name="name" value="wuyun"/>
         <property name="dept" ref="d"/>
+    </bean>
 
+    <!--目标对象-->
+    <bean name="test" class="com.neuedu.test2.TestSale"/>
+    <!--切面对象-->
+    <bean name="bef" class="com.neuedu.test2.BeforTest"/>
+    <!--连接关系-->
+    <!--<bean name="bTest" class="org.springframework.aop.framework.ProxyFactoryBean">
+        <property name="target" ref="test"/>   &lt;!&ndash;类型用ref连接&ndash;&gt;
+        <property name="interceptorNames" value="bef"/>  &lt;!&ndash;name用value连接&ndash;&gt;
+    </bean>-->
+    <bean name="around" class="com.neuedu.test2.AroundTest"/>
+    <!--切面对象-->
+    <bean name="after" class="com.neuedu.test2.AfterTest"/>
+    <!--连接关系-->
+    <bean name="ATest" class="org.springframework.aop.framework.ProxyFactoryBean">
+        <property name="target" ref="test"/>   <!--类型用ref连接-->
+        <property name="interceptorNames" value="around"/>  <!--name用value连接-->
     </bean>
 </beans>
